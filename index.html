@@ -2,22 +2,23 @@
 <html>
 
 <head>
-  <title>My first website!</title>
-  <link rel="stylesheet" href="style.css">
+  <title>CSS Lecture Notes</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <button class="btn btn-primary">Default</button>
-  <header>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="bgimage.html">bg image</a></li>
+          <li><a href="float.html">Float</a></li>
+          <li><a href="units.html">Units of measurement</a></li>
+        </ul>
+      </nav>
+    </header>
     <h2>Home</h2>
     <h3>Lecture 43</h3>
     <p>We link to a stylesheet. We are also shown how we can use different stylesheets for different pages.</p>
@@ -32,7 +33,44 @@
     </p>
     <h4>Using a color picker</h4>
     <p>We use Paletton</p>
-  </section>
+
+    <h3>
+      CSS Cheat Sheet
+
+    </h3>
+
+
+    <p>
+      Cascading Style Sheets at the most basic level it indicates that the order of CSS rules matter.
+    </p>
+    <ul>
+      <li>.class - good for selecting a group of elements to use the same style</li>
+      <li>#id - use only once.</li>
+      <li>* - quite rare. affects all elements. can be over ridden easily as * is usually at top and the cascade beats
+        it.</li>
+      <li>element</li>
+      <li>element, element - if you want 2 elements to have same properties.</li>
+      <li>element element - (h2 p) all p's inside h2's</li>
+      <li>element > element - div > p Selects all p elements where the parent is a div element. nothing inbetween.
+      </li>
+      <li>element + element - div + p Selects all p elements that are placed immediately after div elements</li>
+      <li>:hover a:hover Selects links on mouse over</li>
+      <li>:last-child - p:last-child Selects every p element that is the last child of its parent</li>
+      <li>:first-child - p:first-child Selects every <p> element that is the first child of its parent</li>
+      <li>!important (not recommended). When an important rule is used on a style declaration, this declaration
+        overrides any other declarations. Although technically !important has nothing to do with specificity, it
+        interacts directly with it. Using !important, however, is bad practice and should be avoided because it makes
+        debugging more difficult by breaking the natural cascading in your stylesheets. When two conflicting
+        declarations with the !important rule are applied to the same element, the declaration with a greater
+        specificity will be applied.</li>
+    </ul>
+    <p>What seletors win out in the cascade depends on:</p>
+    <ul>
+      <li>Specificity - how specific is your selector, nested/detailed. inline wins, but bad practice.</li>
+      <li>Importance - as above</li>
+      <li>Source Order - multiple stylesheets, latest sheet wins.</li>
+    </ul>
+  </div>
 </body>
 
 </html>
